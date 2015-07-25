@@ -1,0 +1,293 @@
+﻿/**********************************
+*      Error/Success Messages
+***********************************/
+
+.success {
+    clear: both;
+    width: 97%;
+}
+
+.close-btn {
+    float: right;
+    position: relative;
+    top: -15px;
+    padding: 0 4px 0 4px;
+}
+
+.border {
+    border: 1px solid black;
+    margin: 10px 0 10px 0;
+}
+
+.divErrorMessage {
+    width: 95%;
+    margin: 7px auto !important;
+    padding: 15px;
+}
+
+.val{
+    color: red;
+    position: relative;
+    top: -22px;
+    left: 2px;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.validation {
+    width: 97%;
+}
+
+#about {
+    margin-top: 25px;
+}
+
+#about li {
+    margin-bottom: 10px;
+}
+/**********************************
+*           General
+***********************************/
+body {
+    background: #fff url(Images/bg-main.png) repeat-x;
+    overflow-x: hidden;
+}
+
+.page {
+    background-color: #F4F4F4;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid gray;
+    /*position: relative;*/
+    
+}
+
+.table {
+    background-color: beige;
+}
+
+    /*.table-striped > tbody > tr:nth-child(odd) {
+    background-color: #FDF5E6;
+}*/
+
+    .table > thead > tr > th {
+        background-color: lightgray;
+    }
+
+#page-header {
+    margin-left: 30px;
+}
+
+.page-header-text {
+    margin-left: 30px;
+}
+
+.right {
+    position: relative;
+    margin-right: 40px;
+    float: right;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.position-absolute {
+    position: absolute;   
+}
+
+h2 {
+    margin-top: 7px;
+}
+/**********************************
+*           Header
+***********************************/
+
+
+#logo {
+    /*font-family: 'Signika', sans-serif;*/
+    font-family: 'Exo', sans-serif;
+    font-size: 48px;
+    color: #35404F;
+    margin-bottom: -10px;
+    margin-top: 0;
+    text-shadow: 0 0 2px #000; /* Firefox 3.5+, Opera 9+, Safari 1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=#000,Strength=1); /* IE<10 */
+}
+
+#logo-small {
+    /*font-family: 'Signika', sans-serif;*/
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+    color: #35404F;
+    margin-top: 0;
+    position: relative;
+    left: 138px;
+    text-shadow: 0 0 2px #000; /* Firefox 3.5+, Opera 9+, Safari 1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=#000,Strength=1); /* IE<10 */
+}
+
+#div-logo {
+    position: relative;
+    top: -30px;
+    left: 40px;
+}
+
+.page-header {
+    background-color: #F4F4F4;
+    padding-top: 5px;
+    height: 50px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+/**********************************
+*           Main section
+***********************************/
+.make-margins {
+    width: 95% !important;
+    margin-top: 10px;
+}
+
+.search {
+    margin-bottom: 10px;
+}
+
+
+.form-control {
+    height: 28px;
+}
+
+.btn-search {
+    height: 25px;
+    padding: 0px 10px;
+}
+
+.btn-link-edit {
+    color: lightgray;
+}
+
+.border-gray {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+}
+
+#h5-om {
+    margin-bottom: 30px;
+}
+
+.om {
+   
+}
+
+.background {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px;
+    position: relative;
+    left: -15px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    
+}
+/**********************************
+*      Menu buttons Links forms
+***********************************/
+
+.dropdownlist {
+    width: 80px;
+    height: 28px;
+}
+
+.btn-link {
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.textbox-edit {
+    width: 80px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+}
+
+.block {
+    display: block;
+}
+
+.add-btn {
+    top: -35px;
+}
+
+.input-date {
+    margin-top: 0;
+    width: 105px;
+}
+
+.label-input {
+    margin-bottom: 0;
+
+}
+
+#insert-shift li {
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.btn-insert {
+    padding: 5px 15px !important;
+    position: relative;
+    top: -3px;
+    margin-right: 75px;
+}
+
+.full {
+    width: 100%;
+}
+
+.date-control {
+    display: inline-block !important;
+    width: 100px !important;
+    margin-bottom: 15px;
+
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.btn-margins {
+    margin: 2px 0 2px 0;
+}
+
+/**********************************
+*           Footer
+***********************************/
+
+.page-footer {
+    padding-bottom: 9px;
+    /*margin: 10px 10px 10px 20px; */
+    text-align: center;
+    background-color: #F4F4F4;
+    padding-top: 0;
+    height: 30px;
+    border-top: 1px solid lightgray;
+    position: relative;
+    bottom: 15px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-top: 10px;
+    clear: both;
+}
+
+    .page-footer p {
+        color: gray;
+    }

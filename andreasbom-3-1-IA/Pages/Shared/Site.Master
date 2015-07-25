@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="andreasbom_3_1_IA.Pages.Shared.Site" ViewStateMode="Disabled" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Negotium Tidbank</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tidbank för poolpersonal" />
+    <meta name="author" content="Andreas Bom" />
+    <%: Styles.Render("~/bundles/BootstrapCss") %>
+    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
+    <%-- //Todo Remove CSS- links below --%>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+</head>
+<body onload="">
+
+    <div class="container page">
+        <!-- Header -->
+        <header class="page-header">
+            <div id="div-logo">
+                <h1 id="logo">Negotium</h1>
+                <h3 id="logo-small">Tidbank</h3>
+            </div>
+        </header>
+        <div class="row">
+            <div class="nav col-xs-2">
+            </div>
+            <div class="nav col-xs-10">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderPageHeader" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <form id="form1" runat="server">
+            
+            <div class="container make-margins">
+                <div class="row">
+                    
+                    <!-- Navigation -->
+                    <nav class="nav col-xs-2" role="navigation">
+                        <ul class="nav">
+                            <li>
+                                <asp:HyperLink ID="HyperLinkAllShifts" runat="server"
+                                    Text="Schema"
+                                    CssClass="btn btn-info btn-margins"
+                                    NavigateUrl="~/Pages/Default.aspx" />
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLinkTotalTime" runat="server"
+                                    Text="Tidredovisning"
+                                    CssClass="btn btn-info btn-margins"
+                                    NavigateUrl="~/Pages/TotalTime.aspx" />
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLinkEmpolyee" runat="server"
+                                    Text="Personal"
+                                    CssClass="btn btn-info btn-margins"
+                                    NavigateUrl="~/Pages/Employees.aspx" />
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLinkAbout" runat="server"
+                                    Text="Om"
+                                    CssClass="btn btn-info btn-margins" 
+                                    NavigateUrl='~/Pages/Om.aspx'/>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Main -->
+                    <div class="main-section col-xs-10" role="main">
+                        <%-- Confirmation MESSAGE --%>
+                    <asp:Panel ID="PanelSuccessMessage" runat="server" CssClass="alert alert-success success " Visible="false">
+                        <asp:Literal ID="LiteralMessage" runat="server"></asp:Literal>
+                        <asp:Button ID="ButtonClose" runat="server" Text="&#10006;" CssClass="btn btn-default close-btn" CausesValidation="False" />
+                    </asp:Panel>
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger validation" />
+                        
+                    <%: Scripts.Render("~/bundles/jQuery") %>
+                    <script type="text/javascript">
+                        $('#<%=ButtonClose.ClientID %>').click(function (e) {
+                            e.preventDefault();
+                            $('#<%=PanelSuccessMessage.ClientID %>').hide("slow");
+                        });
+                    </script>
+                        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <%-- End Div main --%>
+                    
+                    
+
+                    
+                </div>
+                <%-- End div row --%>
+            
+            <%-- End div (inner)container --%>
+            <footer class="page-footer ">
+                <p>Andreas Bom &copy;2015</p>
+            </footer>
+                </div>
+        </form>
+    </div>
+    <%--END Div container --%>
+    
+    <script>
+        setTimeout(function () {
+            $('#<%= PanelSuccessMessage.ClientID %>').fadeOut('slow');
+        }, 2000);
+    </script>
+</body>
+</html>
